@@ -6,16 +6,23 @@ AOS.init({
 
 // تبديل اللغة
 function setLanguage(language) {
-    // إخفاء شاشة اختيار اللغة
-    document.getElementById("language-selection").style.display = 'none';
+    // تحقق من وجود العناصر المطلوبة
+    const languageSelection = document.getElementById("language-selection");
+    const contentAr = document.getElementById("content-ar");
+    const contentEn = document.getElementById("content-en");
 
-    // إظهار المحتوى بناءً على اللغة المختارة
-    if (language === 'ar') {
-        document.getElementById("content-ar").style.display = 'block';
-        document.getElementById("content-en").style.display = 'none';
-    } else {
-        document.getElementById("content-en").style.display = 'block';
-        document.getElementById("content-ar").style.display = 'none';
+    if (languageSelection && contentAr && contentEn) {
+        // إخفاء شاشة اختيار اللغة
+        languageSelection.style.display = 'none';
+
+        // إظهار المحتوى بناءً على اللغة المختارة
+        if (language === 'ar') {
+            contentAr.style.display = 'block';
+            contentEn.style.display = 'none';
+        } else {
+            contentEn.style.display = 'block';
+            contentAr.style.display = 'none';
+        }
     }
 }
 
@@ -36,11 +43,11 @@ glowingElements.forEach(function(element) {
 });
 
 // قائمة التنقل بين اللغات على الأجهزة المحمولة
-document.getElementById("menu-icon").onclick = function() {
-    document.querySelector(".navbar").classList.toggle("active");
-};
+const menuIcon = document.getElementById("menu-icon");
+const navbar = document.querySelector(".navbar");
 
-// تفعيل القائمة المنسدلة على الأجهزة المحمولة (في حال كنت تستخدم قائمة)
-document.getElementById("menu-icon").onclick = function() {
-    document.querySelector(".navbar").classList.toggle("active");
-};
+if (menuIcon && navbar) {
+    menuIcon.onclick = function() {
+        navbar.classList.toggle("active");
+    };
+}
