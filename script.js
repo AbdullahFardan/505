@@ -30,24 +30,24 @@ function setLanguage(language) {
 const glowingElements = document.querySelectorAll('.glowing-card, .lang-button, .footer-button');
 
 // إضافة تأثير عند التحويم على العناصر المشعة
-glowingElements.forEach(function(element) {
-    element.addEventListener('mouseover', function() {
-        element.style.boxShadow = '0 0 20px rgba(0, 0, 255, 0.7)'; // تأثير الإشعاع
-        element.style.transform = 'scale(1.05)'; // تكبير العنصر قليلاً
-    });
+if ('addEventListener' in document) {
+    glowingElements.forEach(function(element) {
+        element.addEventListener('mouseover', function() {
+            element.classList.add('active-glow'); // إضافة صنف التنشيط
+        });
 
-    element.addEventListener('mouseout', function() {
-        element.style.boxShadow = '0 4px 8px rgba(0, 0, 255, 0.2)'; // إعادة الظل الافتراضي
-        element.style.transform = 'scale(1)'; // العودة إلى الحجم الأصلي
+        element.addEventListener('mouseout', function() {
+            element.classList.remove('active-glow'); // إزالة صنف التنشيط
+        });
     });
-});
+}
 
 // قائمة التنقل بين اللغات على الأجهزة المحمولة
 const menuIcon = document.getElementById("menu-icon");
 const navbar = document.querySelector(".navbar");
 
 if (menuIcon && navbar) {
-    menuIcon.onclick = function() {
-        navbar.classList.toggle("active");
-    };
+    menuIcon.addEventListener('click', function() {
+        navbar.classList.toggle('active');
+    });
 }
