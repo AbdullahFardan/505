@@ -15,24 +15,27 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: rgb(6, 0, 33); /* خلفية شفافة */
+    background-color: rgba(6, 0, 33, 0.9); /* خلفية شفافة */
     position: relative;
+    padding: 20px;
 }
 
 /* تحسين تنسيق البطاقة مع تأثيرات مشعة */
 .language-box {
     text-align: center;
-    background: rgb(6, 0, 33); /* خلفية شبه شفافة */
-    padding: 40px;
+    background-color: rgba(6, 0, 33, 0.9); /* خلفية شبه شفافة */
+    padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 255, 0.4); /* تأثير مشع خفيف */
+    box-shadow: 0 4px 15px rgba(0, 0, 255, 0.3); /* تأثير مشع خفيف */
     transition: transform 0.3s, box-shadow 0.3s; /* تأثيرات حركية عند التحويم */
+    max-width: 600px; /* تعيين حد أقصى للعرض */
+    margin: 20px;
 }
 
 /* تأثيرات عند التحويم على البطاقة */
 .language-box:hover {
     transform: scale(1.05); /* تكبير البطاقة قليلاً */
-    box-shadow: 0 0 20px rgba(0, 0, 255, 0.8); /* زيادة تأثير الإشعاع */
+    box-shadow: 0 0 25px rgba(0, 0, 255, 0.7); /* زيادة تأثير الإشعاع */
 }
 
 /* تحسين مظهر النصوص مع تأثيرات الإضاءة */
@@ -40,46 +43,47 @@ body {
 .language-box h5,
 .language-box h3,
 .language-box h4 {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7); /* تأثير مشع خفيف على النص */
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.7); /* تأثير مشع خفيف على النص */
     color: #ffffff; /* لون النص */
+    margin-bottom: 15px;
 }
 
 /* تنسيق الأزرار داخل البطاقة */
 .buttons-container {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     margin-top: 20px;
+    flex-wrap: wrap; /* لتجنب مشاكل العرض على الشاشات الصغيرة */
 }
 
 /* تنسيق الأزرار مع تأثيرات مشعة */
 .lang-button {
-    background-color: rgba(0, 0, 36, 0.5); /* لون أزرق داكن شفاف */
+    background-color: rgba(0, 0, 36, 0.7); /* لون أزرق داكن شفاف */
     color: #ffffff;
     border: none;
-    padding: 12px 30px;
-    font-size: 1.2em;
+    padding: 12px 25px;
+    font-size: 1.1em;
     cursor: pointer;
     border-radius: 8px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
 }
 
 .lang-button:hover {
     background-color: rgba(0, 0, 139, 0.8);
-    transform: translateY(-3px);
-    box-shadow: 0 0 15px rgba(0, 0, 255, 0.7); /* تأثير مشع */
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.7); /* تأثير مشع */
 }
-
 
 /* إعدادات البطاقات المشعة */
 .glowing-card {
     padding: 20px;
     margin: 20px auto;
-    background-color: rgb(6, 0, 33); /* خلفية مشابهة للأزرار */
+    background-color: rgba(6, 0, 33, 0.9); /* خلفية مشابهة للأزرار */
     border-radius: 8px;
     max-width: 800px;
-    box-shadow: 0 4px 8px rgba(0, 0, 255, 0.2); /* ظل خفيف */
+    box-shadow: 0 4px 10px rgba(0, 0, 255, 0.3); /* ظل خفيف */
     text-align: center;
     color: #ffffff; /* جعل النص باللون الأبيض */
     transition: transform 0.3s, box-shadow 0.3s;
@@ -87,7 +91,7 @@ body {
 
 .glowing-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(0, 0, 255, 0.7); /* تأثير مشع */
+    box-shadow: 0 0 25px rgba(0, 0, 255, 0.8); /* تأثير مشع */
 }
 
 .glowing-card ul {
@@ -103,34 +107,32 @@ body {
 
 /* إعداد النصوص لتكون مشعة */
 .glowing-card h2, .glowing-card p, .glowing-card ul {
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.7); /* تأثير مشع خفيف على النص */
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.7); /* تأثير مشع خفيف على النص */
     line-height: 1.6;
     color: #ffffff;
 }
 
+/* إعداد النص المشع */
 .glowing-text {
-  font-size: 14px;
-  color: #ffffff; /* لون النص الأبيض */
-  text-align: center;
-  text-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* إزالة تأثير الظل */
+    font-size: 14px;
+    color: #ffffff; /* لون النص الأبيض */
+    text-align: center;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.8); /* إزالة تأثير الظل */
 }
-
-
-
 
 /* إعدادات الشهادات */
 .certificate {
-    margin: 15px 0;
+    margin: 20px 0;
     padding: 15px;
     background: rgba(255, 255, 255, 0.1); /* خلفية نصف شفافة */
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .certificate:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(0, 0, 255, 0.7); /* تأثير مشع */
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.7); /* تأثير مشع */
 }
 
 .certificate h3 {
@@ -138,6 +140,7 @@ body {
     margin-bottom: 10px;
 }
 
+/* تنسيق الإطارات */
 iframe {
     border: none;
     border-radius: 5px;
@@ -161,14 +164,15 @@ footer {
     display: flex;
     justify-content: center;
     gap: 15px;
+    flex-wrap: wrap; /* لتجنب مشاكل العرض على الشاشات الصغيرة */
 }
 
 .footer-button {
-    background-color: rgb(٦, ٠, ٣٣); /* لون الأزرار مشابه للأزرار الأخرى */
+    background-color: rgba(6, 0, 33, 0.8); /* لون الأزرار مشابه للأزرار الأخرى */
     color: #ffffff;
     padding: 10px 20px;
     border-radius: 8px;
-    font-size: 1.2em;
+    font-size: 1.1em;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     display: flex;
@@ -191,67 +195,32 @@ footer {
 @media screen and (max-width: 390px) {
     body {
         overflow-x: hidden; /* منع التمرير الأفقي */
-        font-size: 0.75em; /* تقليل حجم النصوص بشكل عام */
+        font-size: 0.8em; /* تقليل حجم النصوص بشكل عام */
     }
 
     header h1 {
-        font-size: 1.1em; /* تقليل حجم العنوان الرئيسي */
-        margin-bottom: 8px; /* تقليل الهوامش السفلية */
+        font-size: 1.2em; /* تقليل حجم العنوان الرئيسي */
+        margin-bottom: 10px; /* تقليل الهوامش السفلية */
     }
 
     .lang-button {
-        width: 85px; /* تقليل عرض الأزرار */
-        padding: 5px 8px; /* تقليل الهوامش الداخلية للأزرار */
-        font-size: 0.7em; /* تقليل حجم النص في الأزرار */
+        width: 100px; /* تعديل عرض الأزرار */
+        padding: 8px 12px; /* تعديل الهوامش الداخلية للأزرار */
+        font-size: 0.85em; /* تعديل حجم النص في الأزرار */
     }
 
     iframe {
-        height: 180px; /* تقليل ارتفاع iframe ليتناسب مع الشاشة الصغيرة */
-        width: 100%; /* تأكد من أن iframe يمتد على العرض الكامل */
+        height: 200px; /* تعديل ارتفاع iframe ليتناسب مع الشاشة الصغيرة */
         margin: 5px 0; /* تقليل المسافات حول iframe */
     }
 
-    .language-selection h2, .language-selection h5 {
-        font-size: 1em; /* تقليل حجم النص في العناوين الثانوية */
-        margin-bottom: 8px; /* تقليل المسافات السفلية بين العناوين */
-    }
-
-    .language-selection h3, .language-selection h4 {
-        font-size: 0.85em; /* تقليل حجم النص في العناوين الفرعية */
-        margin-bottom: 6px; /* تقليل المسافات السفلية بين العناوين الفرعية */
-    }
-
-    .content {
-        padding: 8px 12px; /* تقليل الهوامش الداخلية للمحتوى */
-    }
-
     .certificate {
-        padding: 8px; /* تقليل الهوامش الداخلية للشهادات */
-        margin: 10px 0; /* تقليل المسافات بين الشهادات */
-        font-size: 0.75em; /* تقليل حجم النص داخل الشهادات */
+        padding: 10px; /* تعديل الهوامش الداخلية للشهادات */
+        font-size: 0.8em; /* تعديل حجم النص داخل الشهادات */
     }
 
     .footer-button {
-        font-size: 0.65em; /* تقليل حجم النص في الأزرار السفلية بشكل ملحوظ */
-        padding: 5px 7px; /* تقليل حجم الأزرار في الفوتر */
-    }
-
-    img {
-        max-width: 100%; /* تأكد من أن الصور لا تتجاوز عرض الشاشة */
-        height: auto; /* الحفاظ على نسبة الأبعاد */
-    }
-
-    /* تحسين عرض الأيقونات وتجنب تداخلها */
-    .certificate img {
-        max-width: 65%; /* تقليل عرض الأيقونات داخل الشهادات لهذه الدقة */
-        height: auto;
-        margin: 0 auto; /* توسيط الأيقونات */
-        display: block;
-    }
-
-    /* تحسين إعدادات النصوص والأزرار */
-    p, h2, h3, h4, h5 {
-        line-height: 1.3; /* تقليل المسافات بين السطور */
-        margin-bottom: 8px; /* تقليل الهوامش السفلية للعناصر النصية */
+        font-size: 0.8em; /* تعديل حجم النص في الأزرار السفلية */
+        padding: 8px 10px; /* تعديل حجم الأزرار في الفوتر */
     }
 }
